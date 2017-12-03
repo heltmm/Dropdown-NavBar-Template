@@ -21,12 +21,19 @@
             <%= link_to 'Edit Profile',edit_user_registration_path, :class => "dropdown-item" %>
             <%= link_to 'Logout', destroy_user_session_path, :class => "dropdown-item", method: :delete %>
           </div>
-
       <% else %>
         <a class="navbar-brand ml-auto"><%= link_to 'Login', new_user_session_path %></a>
       <% end %>
       </div>
     </nav>
-    <%= yield %>
+    <div>
+        <%= flash[:notice] %>
+    </div>
+    <div>
+        <%= flash[:alert] %>
+    </div>
+    <div class='container'>
+      <%= yield %>
+    </div>
   </body>
 </html>
