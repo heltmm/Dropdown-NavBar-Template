@@ -11,9 +11,16 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <% if current_user %>
-        <p> Welcome <%= current_user.username %>
-        <a class="navbar-brand"><%= link_to 'Edit Profile',edit_user_registration_path %></a>
-        <a class="navbar-brand  ml-auto"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a>
+        <div class="nav-item dropdown ml-auto">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= image_tag(current_user.avatar.url(:thumb)) %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <p class="dropdown-custom">Signed in as <%= current_user.username %></p><hr>
+            <%= link_to 'Edit Profile',edit_user_registration_path, :class => "dropdown-item" %>
+            <%= link_to 'Logout', destroy_user_session_path, :class => "dropdown-item", method: :delete %>
+          </div>
+        </div>
       <% else %>
         <a class="navbar-brand ml-auto"><%= link_to 'Login', new_user_session_path %></a>
       <% end %>
