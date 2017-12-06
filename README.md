@@ -1,24 +1,9 @@
-# README
+# Dropdown NavBar Template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## This the finished template created by along with my blog post [Creating a Dropdown Navbar With Users and Avatars](https://heltmm.github.io/jekyll/update/2017/12/06/create_a_user_avatar_dropdown_nabar.html)
 
-Things you may want to cover:
+![alt text](public/default_avatar.png "Default Avatar")
 
-* Ruby version
+![alt text](public/updated_avatar.png "Updated Avatar")
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt text](public/dropdown.png "Dropdown")
